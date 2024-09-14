@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Points Table</title>
+    <style>
+        /* CSS styles */
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            padding: 10px 20px;
+        }
+
+        nav .logo img {
+            max-height: 40px;
+        }
+
+        nav a {
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        nav a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .points-table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+            color: #070707;
+            background-color: rgb(152, 198, 84);
+            margin-bottom: 30px;
+        }
+
+        .points-table th, .points-table td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .points-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .points-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .points-table tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="#"><img src="psl_logo.png" alt="Logo"></a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="searchplayers.html">Players</a>
+            <a href="match_schedule.html">Match Schedule</a>
+            <a href="#" class="active">Points Table</a>
+            <a href="Teams.html">Teams</a>
+            <a href="login.html">Login as Administrator</a>
+        </div>
+    </nav>
+
+    <h2>Points Table</h2>
+
+    <!-- PHP inclusion for points table -->
+    <?php include 'fetch_points_table.php'; ?>
+
+</body>
+</html>
